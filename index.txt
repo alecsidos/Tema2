@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /* ================================
+           1. Stil general pentru întreaga pagină
+           ================================ */
+        body {
+            font-family: Arial, sans-serif;  /* tip font */
+            color: black;                    /* culoarea textului */
+            margin: 40px;
+        }
+
+        /* ================================
+           2. Titlu principal (header)
+           ================================ */
+        .header {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 28px;                 /* dimensiune font titlu */
+            color: #6b2e2e;                  /* culoare font */
+            background-color: #d4a79c;       /* culoare fundal secțiune */
+            border: 3px solid black;         /* margine */
+            padding: 15px;
+            width: 80%;
+        }
+
+        /* ================================
+           3. Email
+           ================================ */
+        .email {
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            color: #cc8800;                  /* culoare font email */
+            text-align: right;
+            width: 80%;
+            margin-top: 5px;
+        }
+
+        /* ================================
+           4. Titlu secundar
+           ================================ */
+        .title {
+            font-family: Arial, sans-serif;
+            font-weight: bold;
+            font-size: 20px;
+            color: black;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 10px;
+            text-decoration: underline;
+        }
+
+        /* ================================
+           5. Tabel
+           ================================ */
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-align: center;
+        }
+
+        /* Margini și padding celule */
+        table, th, td {
+            border: 2px solid #a24a37;      /* margine tabel */
+            padding: 8px;
+        }
+
+        /* ================================
+           6. Container secțiune rețea
+           ================================ */
+        .box {
+            border: 3px solid #a24a37;      /* margine secțiune */
+            background-color: #eee6e6;       /* fundal secțiune */
+            width: 85%;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        /* ================================
+           7. Imagini statice
+           ================================ */
+        .network-img {
+            display: block;
+            margin: 0 auto;
+            width: 45%;
+            border-radius: 10px;  /* margini rotunjite */
+            opacity: 0.9;         /* opacitate imagine */
+        }
+
+        /* ================================
+           8. Lista caracteristici
+           ================================ */
+        .list {
+            margin-top: 20px;
+            font-family: Arial, sans-serif;
+            font-size: 18px;
+            color: black;
+        }
+
+        /* ================================
+           9. CARUSEL / SLIDESHOW
+           ================================ */
+        .slideshow-container {
+            max-width: 800px;
+            position: relative;
+            margin: auto;
+            background-color: #3d5360;  /* fundal albastru închis */
+            padding: 20px 0;
+            border-radius: 5px;
+        }
+
+        .slide {
+            display: none;  /* ascunde toate slide-urile */
+        }
+
+        .slide img {
+            width: 250px;
+            height: auto;
+            margin: auto;
+            display: block;
+            border-radius: 10px;  /* margini rotunjite imagini */
+            padding: 10px;
+            background: white;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            padding: 16px;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+            transition: 0.3s;
+            user-select: none;
+        }
+
+        .prev { left: 0; }
+        .next { right: 0; }
+
+        .prev:hover, .next:hover {
+            color: #ddd;
+        }
+
+        /* Bulinele caruselului */
+        .dot {
+            height: 12px;
+            width: 12px;
+            margin: 0 4px;
+            background-color: #bbb;
+            border-radius: 50%;
+            display: inline-block;
+            cursor: pointer;
+        }
+
+        .active {
+            background-color: #717171;
+        }
+
+        /* Efect de tranziție fade */
+        .fade {
+            animation-name: fade;
+            animation-duration: 1s;
+        }
+
+        @keyframes fade {
+            from {opacity: .4}
+            to {opacity: 1}
+        }
+    </style>
+</head>
+<body>
+
+<div class="header">Csidos Maria-Alexandra</div>
+<div class="email">
+    <a href="mailto:alexandra.maria.csidos@gmail.com">
+        alexandra.maria.csidos@gmail.com
+    </a>
+</div>
+
+<div class="title">Specificatii tehnice ale statiei principale de lucru</div>
+
+<table>
+    <tr>
+        <th>Resursă</th>
+        <th>Valoare observată</th>
+        <th>Observații</th>
+    </tr>
+    <tr>
+        <td>CPU</td>
+        <td>0%</td>
+        <td>Consum foarte redus – video YouTube probabil deja buffer-uit sau în pauză.</td>
+    </tr>
+    <tr>
+        <td>Memorie</td>
+        <td>1.352,2 MB</td>
+        <td>Chrome folosește mult RAM datorită tab-urilor și proceselor multiple.</td>
+    </tr>
+    <tr>
+        <td>Disk</td>
+        <td>0.1 MB/s</td>
+        <td>Activitate mică pe disc – doar mici scrieri/încărcări în cache.</td>
+    </tr>
+    <tr>
+        <td>Network</td>
+        <td>0.1 Mbps</td>
+        <td>Trafic scăzut – YouTube probabil a încărcat deja mare parte din video.</td>
+    </tr>
+</table>
+
+<div class="box">
+    <div class="title">Structura retelei personale si accesul la internet</div>
+
+    <!-- schimbă network.png cu numele imaginii tale -->
+    <img src="network.png" class="network-img" alt="Structura retelei">
+
+    <div class="list">
+        <b>Caracteristicile conexiunii la retea</b>
+        <ol>
+            <li>Adresa MAC</li>
+            <li>Adresa IP</li>
+            <li>Debit la download</li>
+            <li>Debit la upload</li>
+        </ol>
+    </div>
+</div>
+
+<h3>Utilizarea resurselor (slideshow)</h3>
+
+<div class="slideshow-container">
+
+    <div class="slide fade">
+        <img src="imaginea1.jpg" alt="Poza 1">
+    </div>
+
+    <div class="slide fade">
+        <img src="imaginea2.jpg" alt="Poza 2">
+    </div>
+
+    <div class="slide fade">
+        <img src="imaginea3.jpg" alt="Poza 3">
+    </div>
+
+    <!-- butoane stânga / dreapta -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+
+<br>
+
+<!-- bulinele -->
+<div style="text-align:center">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("slide");
+        let dots = document.getElementsByClassName("dot");
+
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+    }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,169 @@
+/* ================================
+   1. Stil general pentru întreaga pagină
+   ================================ */
+body {
+    font-family: Arial, sans-serif;  /* tip font */
+    color: black;                    /* culoarea textului */
+    margin: 40px;
+}
+
+/* ================================
+   2. Titlu principal (header)
+   ================================ */
+.header {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 28px;                 /* dimensiune font titlu */
+    color: #6b2e2e;                  /* culoare font */
+    background-color: #d4a79c;       /* culoare fundal secțiune */
+    border: 3px solid black;         /* margine */
+    padding: 15px;
+    width: 80%;
+}
+
+/* ================================
+   3. Email
+   ================================ */
+.email {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    color: #cc8800;                  /* culoare font email */
+    text-align: right;
+    width: 80%;
+    margin-top: 5px;
+}
+
+/* ================================
+   4. Titlu secundar
+   ================================ */
+.title {
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: black;
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+/* ================================
+   5. Tabel
+   ================================ */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* Margini și padding celule */
+table, th, td {
+    border: 2px solid #a24a37;      /* margine tabel */
+    padding: 8px;
+}
+
+/* ================================
+   6. Container secțiune rețea
+   ================================ */
+.box {
+    border: 3px solid #a24a37;      /* margine secțiune */
+    background-color: #eee6e6;       /* fundal secțiune */
+    width: 85%;
+    padding: 20px;
+    margin-top: 30px;
+}
+
+/* ================================
+   7. Imagini statice
+   ================================ */
+.network-img {
+    display: block;
+    margin: 0 auto;
+    width: 45%;
+    border-radius: 10px;  /* margini rotunjite */
+    opacity: 0.9;         /* opacitate imagine */
+}
+
+/* ================================
+   8. Lista caracteristici
+   ================================ */
+.list {
+    margin-top: 20px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    color: black;
+}
+
+/* ================================
+   9. CARUSEL / SLIDESHOW
+   ================================ */
+.slideshow-container {
+    max-width: 800px;
+    position: relative;
+    margin: auto;
+    background-color: #3d5360;  /* fundal albastru închis */
+    padding: 20px 0;
+    border-radius: 5px;
+}
+
+.slide {
+    display: none;  /* ascunde toate slide-urile */
+}
+
+.slide img {
+    width: 250px;
+    height: auto;
+    margin: auto;
+    display: block;
+    border-radius: 10px;  /* margini rotunjite imagini */
+    padding: 10px;
+    background: white;
+}
+
+.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 24px;
+    transition: 0.3s;
+    user-select: none;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
+
+.prev:hover, .next:hover {
+    color: #ddd;
+}
+
+/* Bulinele caruselului */
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 4px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #717171;
+}
+
+/* Efect de tranziție fade */
+.fade {
+    animation-name: fade;
+    animation-duration: 1s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
