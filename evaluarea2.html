@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="ro">
+<head>
+    <meta charset="UTF-8">
+    <title>Specificatii Tehnice - Proiect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="header">Csidos Maria-Alexandra</div>
+<div class="email">
+    <a href="mailto:alexandra.maria.csidos@gmail.com">
+        alexandra.maria.csidos@gmail.com
+    </a>
+</div>
+
+<div class="title">Specificatii tehnice ale statiei principale de lucru</div>
+
+<table>
+    <tr>
+        <th>Resursă</th>
+        <th>Valoare observată</th>
+        <th>Observații</th>
+    </tr>
+    <tr>
+        <td>CPU</td>
+        <td>0%</td>
+        <td>Consum foarte redus – video YouTube probabil deja buffer-uit sau în pauză.</td>
+    </tr>
+    <tr>
+        <td>Memorie</td>
+        <td>1.352,2 MB</td>
+        <td>Chrome folosește mult RAM datorită tab-urilor și proceselor multiple.</td>
+    </tr>
+    <tr>
+        <td>Disk</td>
+        <td>0.1 MB/s</td>
+        <td>Activitate mică pe disc – doar mici scrieri/încărcări în cache.</td>
+    </tr>
+    <tr>
+        <td>Network</td>
+        <td>0.1 Mbps</td>
+        <td>Trafic scăzut – YouTube probabil a încărcat deja mare parte din video.</td>
+    </tr>
+</table>
+
+<div class="box">
+    <div class="title">Structura retelei personale si accesul la internet</div>
+
+    <img src="network.png" class="network-img" alt="Structura retelei">
+
+    <div class="list">
+        <b>Caracteristicile conexiunii la retea</b>
+        <ol>
+            <li>Adresa MAC</li>
+            <li>Adresa IP</li>
+            <li>Debit la download</li>
+            <li>Debit la upload</li>
+        </ol>
+    </div>
+</div>
+
+<div id="monitorizare-sectiune">
+    <h3 style="cursor: pointer; text-align: center; color: #3d5360;">
+        Utilizarea resurselor (Monitorizare resurse)
+    </h3>
+    <p id="instructiune" style="text-align: center; font-style: italic; color: #777;">
+        (Dublu click pe acest titlu pentru a activa slideshow-ul automat)
+    </p>
+
+    <div class="slideshow-container" id="slideshow-container" style="display: none;">
+        <div class="slide fade">
+            <img src="imaginea1.png" alt="Monitorizare 1">
+        </div>
+        <div class="slide fade">
+            <img src="imaginea2.png" alt="Monitorizare 2">
+        </div>
+        <div class="slide fade">
+            <img src="imaginea3.jpg.png" alt="Monitorizare 3">
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>
+    </div>
+
+    <div id="dots-container" style="text-align:center; display: none; margin-top: 15px;">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+</div>
+
+<br>
+
+<script src="script.js"></script>
+
+</body>
+</html>
